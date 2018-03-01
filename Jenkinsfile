@@ -1,5 +1,6 @@
 #!groovy
 
 node {
-    println "ls".execute().text
+    def foo = 'bar'
+    sh 'echo "${foo}"'
 }
