@@ -22,7 +22,9 @@ node {
         
         if [ $helmVal -eq 0 ]; then
           helmInstall()
-        else
+        fi
+        
+        if [ $helmVal -ne 0 ]; then 
           helmUpgrade()
         fi
       '''
