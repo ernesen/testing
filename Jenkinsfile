@@ -23,7 +23,7 @@ if [ $helmVal -eq 0 ]
 then
   echo "helmInstall()"
 else 
-  echo "helmUpgrade()"
+  helmUpgrade()
 fi
 
 #        if [ $helmVal -eq 0 ]; then
