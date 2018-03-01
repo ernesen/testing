@@ -27,6 +27,7 @@ node {
         if [ $helmVal -ne 0 ]; then 
           helmUpgrade()
         fi
+      
       '''
     }
 }
