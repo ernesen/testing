@@ -2,10 +2,13 @@
 
 node {
 
-
-def username = 'Jenkins'
-echo 'Hello Mr. ${username}'
-echo "I said, Hello Mr. ${username}"
-
+    steps {
+         bash '''#!/bin/bash
+                 echo "hello world"
+                 toto=`helm ls --all myemp | wc -l`
+                 echo $toto
+                 
+         '''
+    }
 
 }
