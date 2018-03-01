@@ -19,7 +19,13 @@ node {
         #!/bin/sh
         
         helmVal=`helm ls --all myemp | wc -l`
-     
+if [ $helmVal -eq 0 ]
+then
+echo  helmVal =  $helmVal
+else
+echo   helmVal =  $helmVal
+fi
+
 #        if [ $helmVal -eq 0 ]; then
 #          helmInstall()
 #        fi
