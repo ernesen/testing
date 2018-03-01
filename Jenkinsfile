@@ -1,6 +1,11 @@
 #!groovy
 
 node {
-    def foo = 'bar'
-    sh 'echo "${foo}"'
+
+
+def username = 'Jenkins'
+echo 'Hello Mr. ${username}'
+echo "I said, Hello Mr. ${username}"
+
+
 }
