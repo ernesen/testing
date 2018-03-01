@@ -24,6 +24,7 @@ then
   echo "helmInstall()"
 else 
   helmUpgrade()
+  exit 0
 fi
 
 #        if [ $helmVal -eq 0 ]; then
