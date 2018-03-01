@@ -10,7 +10,7 @@ def helmInstall() {
 def helmUpgrade() {
     // Test that helm can correctly communication with the Kubernetes API
   	sh 'helm upgrade myemp myemp/'
-    sh 'helm history myemp'
+    //sh 'helm history myemp'
 }
 
 node {
