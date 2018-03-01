@@ -9,8 +9,8 @@ def helmInstall() {
 
 def helmUpgrade() {
     // Test that helm can correctly communication with the Kubernetes API
-  	sh 'helm upgrade myemp myemp/'
-    //sh 'helm history myemp'
+  	//sh 'helm upgrade myemp myemp/'
+    sh 'helm history myemp'
 }
 
 node {
@@ -21,10 +21,10 @@ node {
         helmVal=`helm ls --all myemp | wc -l`
 if [ $helmVal -eq 0 ]
 then
-  echo "helmInstall()"
+  helmInstall()
 else 
   helmUpgrade()
-  exit 0
+  #exit 0
 fi
 
 #        if [ $helmVal -eq 0 ]; then
