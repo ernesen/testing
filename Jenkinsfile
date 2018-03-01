@@ -21,9 +21,9 @@ node {
         helmVal=`helm ls --all myemp | wc -l`
 if [ $helmVal -eq 0 ]
 then
-echo  helmVal =  $helmVal
+helmInstall()
 else
-echo   helmVal =  $helmVal
+helmUpgrade()
 fi
 
 #        if [ $helmVal -eq 0 ]; then
