@@ -2,9 +2,11 @@
 
 node {
          sh '''#!/bin/sh
-                 echo "hello world"
                  toto=`helm ls --all myemp | wc -l`
-                 echo $toto
-                 
+                 	if [ $toto -eq 200 ]; then
+                    echo $toto equals ==== 0 ===
+                 else
+                    echo $toto not equal to  ==== 0 ===
+                 if
          '''
 }
