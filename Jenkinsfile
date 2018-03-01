@@ -20,14 +20,15 @@ node {
         
         helmVal=`helm ls --all myemp | wc -l`
         
-        if [ $helmVal -eq 0 ]; then
+        if [ $helmVal -eq 0 ]
+        then
           helmInstall()
         fi
         
-        if [ $helmVal -ne 0 ]; then 
+        if [ $helmVal -ne 0 ]
+        then 
           helmUpgrade()
         fi
-      
       '''
     }
 }
