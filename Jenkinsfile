@@ -19,23 +19,16 @@ node {
         #!/bin/sh
         
         helmVal=`helm ls --all myemp | wc -l`
-if [ $helmVal -eq 0 ]
-then
-  helmInstall()
-  exit 0
-else 
-  helmUpgrade()
-  exit 0
-fi
-
-#        if [ $helmVal -eq 0 ]; then
-#          helmInstall()
-#        fi
-#        
-#        if [ $helmVal -ne 0 ]
-#        then 
-#          helmUpgrade()
-#        fi
-      '''
+        if [ $helmVal -eq 0 ]
+        then
+          helmInstall()
+          echo "helmInstall()"
+          exit 0
+        else 
+          helmUpgrade()
+          echo "helmUpgrade()"
+          exit 0
+        fi
+     '''
     }
 }
